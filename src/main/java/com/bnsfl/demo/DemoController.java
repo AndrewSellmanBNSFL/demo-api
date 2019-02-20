@@ -9,14 +9,15 @@ public class DemoController {
 
     @PostMapping(path = "/message/")
     public MessageResponse message(@RequestBody MessageRequest request) {
-        String message = request.getName() + ", ";
+        StringBuilder message = new StringBuilder(request.getName());
+        message.append(", ");
         if (request.getSomeNumber() % 2 == 0) {
-            message += "eventually you'll get it right.";
+            message.append("eventually you'll get it right.");
         } else {
-            message += "what an odd request.";
+            message.append("what an odd request.");
         }
 
-        return new MessageResponse(message);
+        return new MessageResponse(message.toString());
     }
 
 }
