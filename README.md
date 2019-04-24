@@ -1,3 +1,3 @@
 # demo-api
 
-sandbox app to play in the Pivotal environment, along with concourse CI
+Sandbox app to play with Azure DevOps build pipeline.
